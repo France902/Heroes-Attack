@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GravityCharacter : MonoBehaviour
 {
-    public float speed;
     public float gravityForce = 9.81f; 
     public GravityCollider gc;
 

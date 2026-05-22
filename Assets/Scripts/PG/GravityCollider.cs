@@ -21,7 +21,6 @@ public class GravityCollider : MonoBehaviour
         // Controlla se l'oggetto toccato ha il tag "Ground"
         if (collision.CompareTag("Ground"))
         {
-            Debug.Log("si");
             character.SetGrounded(true);
         }
     }
