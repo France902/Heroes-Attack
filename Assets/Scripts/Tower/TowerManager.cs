@@ -5,6 +5,7 @@ using UnityEngine;
 public class Tower : MonoBehaviour
 {
     public float HP;
+    private float startX, startY;
     private float tilesToBuild;
     private List<GameObject> gameObjects;
 
@@ -13,8 +14,12 @@ public class Tower : MonoBehaviour
     {
         HP = 40;
         gameObjects = new List<GameObject>();
-        createTower();
 
+        startX = 0.1f;
+        startY = -2.7f;
+
+
+        createTower();
     }
 
     
@@ -44,8 +49,7 @@ public class Tower : MonoBehaviour
             tilesToBuild = 0;
         }
 
-        float startX = 0.1f;
-        float startY = -3.9f;
+        
         Vector3 blockScale = new Vector3(5, 4, 1);
 
         for (int i = 0; i < tilesToBuild; i++)
@@ -57,7 +61,6 @@ public class Tower : MonoBehaviour
             
             gameObjects.Add(newBlock);
 
-            // Applica la scala corretta (X: 5, Y: 4, Z: 1)
             newBlock.transform.localScale = blockScale;
         }
     }
@@ -89,16 +92,19 @@ public class Tower : MonoBehaviour
         this.tilesToBuild = tilesToBuild;
         Vector3 blockScale = new Vector3(5, 4, 1);
 
-        float startX = 0.1f;
-        float startY = -3.9f;
+        startX = 0.1f;
+        startY = -3f;
 
-        for(int i=gameObjects.Count - 1; i<tilesToBuild + gameObjects.Count - 1; i++)
+        int indexToStart = gameObjects.Count;
+
+        for (int i=indexToStart; i<tilesToBuild + indexToStart; i++)
         {
             float posY = startY + (i * 1.67f);
 
             Vector3 spawnPosition = new Vector3(startX, posY, 0);
 
             GameObject newBlock = Instantiate(towerBlockPrefab, spawnPosition, Quaternion.identity);
+            gameObjects.Add(newBlock);
 
             newBlock.transform.localScale = blockScale;
         }
