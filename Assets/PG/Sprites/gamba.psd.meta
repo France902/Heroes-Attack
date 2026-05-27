@@ -107,7 +107,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 189
-      y: 181
+      y: 184
       width: 230
       height: 110
     spriteID: 57a69b065ed7d0d47b7281ade2efef2d
@@ -442,7 +442,7 @@ ScriptedImporter:
     - {x: 24, y: 25}
     - {x: 25, y: 26}
     tessellationDetail: 0
-    uvTransform: {x: 189, y: 181}
+    uvTransform: {x: 189, y: 184}
     spritePosition: {x: 345, y: 113}
   - name: livello1
     originalName: 
@@ -814,7 +814,7 @@ ScriptedImporter:
     - {x: 29, y: 30}
     tessellationDetail: 0
     uvTransform: {x: 189, y: 4}
-    spritePosition: {x: 108, y: 387}
+    spritePosition: {x: 106, y: 387}
   - name: livello2
     originalName: 
     pivot: {x: 0.4052831, y: 0.69292957}
@@ -1369,7 +1369,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 57a69b065ed7d0d47b7281ade2efef2d
     layerID: 0
-    mosaicPosition: {x: 189, y: 181}
+    mosaicPosition: {x: 189, y: 184}
     flatten: 0
     isImported: 1
     isVisible: 1
