@@ -7,8 +7,11 @@ public class MovementTest : MonoBehaviour
     private Animator animator;
     private bool isWalking = false;
 
+    
+
     void Start()
     {
+        
         // Cerca l'oggetto nella scena tramite il nome
         GameObject targetObject = GameObject.Find("PG");
 
@@ -43,6 +46,8 @@ public class MovementTest : MonoBehaviour
             yield return new WaitForSeconds(1);
         }
     }
+
+    
     // Update is called once per frame
     void Update()
     {
